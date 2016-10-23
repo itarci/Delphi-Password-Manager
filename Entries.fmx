@@ -1,0 +1,38 @@
+object FraEntries: TFraEntries
+  Size.Width = 400.000000000000000000
+  Size.Height = 600.000000000000000000
+  Size.PlatformDefault = False
+  object ListView: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Size.Width = 400.000000000000000000
+    Size.Height = 553.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    SearchVisible = True
+    SearchAlwaysOnTop = False
+  end
+  object BindSourceDB: TBindSourceDB
+    DataSet = DM.FDQuEntry
+    ScopeMappings = <>
+    Left = 248
+    Top = 160
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 140
+    Top = 157
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'Title'
+      Control = ListView
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

@@ -1,0 +1,970 @@
+object FrmEntryList: TFrmEntryList
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'IJP Password Manager'
+  ClientHeight = 641
+  ClientWidth = 354
+  StyleBook = StyleBook
+  Visible = True
+  FormFactor.Width = 480
+  FormFactor.Height = 620
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnFocusChanged = FormFocusChanged
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 0
+  object VertScrollBox: TVertScrollBox
+    Align = Client
+    Size.Width = 354.000000000000000000
+    Size.Height = 601.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 354.000000000000000000
+    Viewport.Height = 601.000000000000000000
+    object Layout: TLayout
+      Align = Client
+      Size.Width = 354.000000000000000000
+      Size.Height = 601.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object TabControl: TTabControl
+        Align = Client
+        FullSize = True
+        Size.Width = 354.000000000000000000
+        Size.Height = 601.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = None
+        Sizes = (
+          354s
+          601s
+          354s
+          601s)
+        object TabItem1: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'List'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ListView: TListView
+            Touch.GestureManager = GestureManager
+            ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+            ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Transparent = True
+            ItemSpaces.Right = 5.000000000000000000
+            Align = Client
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Size.Width = 344.000000000000000000
+            Size.Height = 591.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnMouseEnter = ListViewMouseEnter
+            ItemAppearanceObjects.ItemObjects.Text.TextColor = claBlack
+            ItemAppearanceObjects.ItemObjects.Detail.TextColor = claSilver
+            ItemAppearanceObjects.ItemObjects.Image.Width = 64.000000000000000000
+            ItemAppearanceObjects.ItemObjects.Image.Height = 36.000000000000000000
+            OnClick = ListViewClick
+            OnItemClick = ListViewItemClick
+            OnItemClickEx = ListViewItemClickEx
+            SearchVisible = True
+            object CirAdd: TCircle
+              Anchors = [akRight, akBottom]
+              Fill.Bitmap.Bitmap.PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                03DD494441546843ED99DF4B536118C79FF76C4B3DDB6CFD50B0B2CB761174A3
+                11043667592191DD14884450970EFA070291E80F88148BA0209202A18B9220D2
+                CECC2EA2BCAB1BBB2CCA0BB5C46DC76CDB797B9FB3C783F39CE3CE9C6E27DA07
+                C4E779D4EDFDEE79DEF33EEF2354A9F29FC3E87B49F4F77349892E1F93342D0A
+                C05B35261D122FDCC4128B41FC390F86121C6056E2DA17CED847F1B64A7B5CFE
+                3030C034FD054AA02401A75EAB07331E1EE32CDDCBC0B78FC28EC842FABB04BE
+                C79AC486A622F2370A17CDA60474BE4A34A6BDD22D482D5E8160C847E14DC121
+                F907407E28AC1B93D1FA790A3BA668011125799965D86DF0C22E0A6D09A2C47E
+                8AE5C426A3F2130A39C2B1809669EE0B24D4BBE20FAE52685BE0A0DD03080821
+                2C43A10D7124E0DC732E2F05D56712C0190A6D2B221B2F8309F9E2D879A652C8
+                968202F093F727D417E55AFC2A2842EC8DEE429910EBDA185136C3E55E3C223E
+                D92E80E420B9B66C98017DC3027B446E45E0C07AC4C67E4AAE095B01FAA35293
+                66A0164214AA08A27E166A3299F044E7CE050AE5615B42FA73BE84C5C7A37EB6
+                F68BC245E305D893F5786E926BC252009EB0FA21E512384B5DEB184FED27370F
+                4B01D81E947AC26E250C023B340962E4E66112808D19F636E4BA079EE905CE4D
+                A56812805D65B18D595990BCCD1D13EA51F20C4C02722DB13BC97A7807990616
+                7B80B792E13AC4EDA1854C039300BC8C90E94258980C03D3A68828A90511DC4D
+                AE2DA53CDBAD685752A2FD29C00ACCC7CFFA1BC8D3316560F51AE846784DB29E
+                4C038B3DF06F6112801770325D075B092C916960AAE3134AEAB3507598DC4DB3
+                7E8F38AAF14268F0297ED27F843C1D530670F441A60BE1336418984B489FDBB8
+                1406D36419586C62A690E13A3489BD21D3C024002766387422D73570C87E7D1B
+                910B6700C77D12F846C8750D8C7B468031D383C0A284F4540D4262314D6EC551
+                6179C59B01CB0BBEA5009C55F260FD03722B8ECC6BEF8F9FF6FF20370FDB7E26
+                A22CED05F0CC38E98BB6952CCC656AD2E1776DA15F14C9C33203486ED0CA2CAF
+                71E5847B599FDDE2115B01080E5A73B3CACAC0810F4DB6CBA3E45AB2A1801C81
+                586ECC576634186B9CF35F27CF16473D3D0E7713417554FC721785B617B1F8DF
+                757597DE1F979629628B830C00E4A6C4727739CA09CBA66141BEE064F188A30C
+                AC25A2A83D59E077706246A1AD413C6D70C316AAF9F538CAC05A7063E3AC1238
+                1FCEFD7BA834F09012AF35888FCA62178F149D81B588FBF30171B8F7E94327C9
+                DB4C6147606F83ED019EB0768794134A12B00A4EF3A6DAD4569CDBE4461F2C0C
+                69685ABDC3EA37291FCC8A65CF88779CC6AE526FCC2C7A9B2A55AA1403C05FDF
+                C04DA4733875030000000049454E44AE426082}
+              Fill.Bitmap.WrapMode = TileStretch
+              Fill.Kind = Bitmap
+              Position.X = 264.000000000000000000
+              Position.Y = 511.000000000000000000
+              Size.Width = 60.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claNull
+              Stroke.Thickness = 0.000000000000000000
+              OnClick = CirAddClick
+              object ShadowEffect1: TShadowEffect
+                Distance = 2.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.500000000000000000
+                ShadowColor = xFF40BFF5
+              end
+            end
+          end
+        end
+        object TabItem2: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Add'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object LblTitle: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 23.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Title'
+          end
+          object LblIcon: TLabel
+            Position.X = 272.000000000000000000
+            Position.Y = 24.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Icon'
+          end
+          object ImcIcon: TImageControl
+            Bitmap.PNG = {
+              89504E470D0A1A0A0000000D49484452000000CB000000F80806000000421512
+              30000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00DA49444154785EEDC13101000000C2A0F54F6D0C1F20000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000000000008E6A13C50001
+              CB4E97EE0000000049454E44AE426082}
+            Position.X = 272.000000000000000000
+            Position.Y = 48.000000000000000000
+            Size.Width = 72.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 157
+            OnChange = ImcIconChange
+            OnClick = ImcIconClick
+          end
+          object EdtTitel: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 0
+            Position.X = 8.000000000000000000
+            Position.Y = 48.000000000000000000
+            Size.Width = 257.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object LblUserN: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 88.000000000000000000
+            Size.Width = 54.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Username'
+          end
+          object EdtUserN: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 2
+            KeyboardType = EmailAddress
+            Position.X = 8.000000000000000000
+            Position.Y = 104.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            object CebUser: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 25.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Visible = False
+            end
+          end
+          object LblPassw: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 144.000000000000000000
+            Size.Width = 50.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Password'
+          end
+          object EdtPassw: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 3
+            Password = True
+            Position.X = 8.000000000000000000
+            Position.Y = 160.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            object EdbPassw: TEditButton
+              CanFocus = False
+              Cursor = crArrow
+              StaysPressed = True
+              StyleLookup = 'passwordeditbutton'
+              TabOrder = 0
+              OnClick = EdbPasswClick
+            end
+            object EdbPasGen: TEditButton
+              CanFocus = False
+              Cursor = crArrow
+              StyleLookup = 'additembutton'
+              TabOrder = 1
+              Visible = False
+              OnClick = EdbPasGenClick
+            end
+          end
+          object LblURLpa: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 200.000000000000000000
+            Size.Width = 22.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'URL'
+          end
+          object EdtURL: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 4
+            KeyboardType = URL
+            Position.X = 8.000000000000000000
+            Position.Y = 216.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            object CebURL: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Visible = False
+            end
+          end
+          object LblNotes: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 264.000000000000000000
+            Size.Width = 32.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Notes'
+          end
+          object EdtNotes: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Position.X = 8.000000000000000000
+            Position.Y = 288.000000000000000000
+            Size.Width = 337.000000000000000000
+            Size.Height = 129.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            Viewport.Width = 333.000000000000000000
+            Viewport.Height = 125.000000000000000000
+          end
+          object LblDateC: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 424.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Date created'
+          end
+          object DteDateC: TDateEdit
+            Date = 42005.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 440.000000000000000000
+            Size.Width = 161.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+          end
+          object SbtCopUsr: TSpeedButton
+            Hint = 'Copy username'
+            Images = ImageList
+            ImageIndex = 0
+            Position.X = 320.000000000000000000
+            Position.Y = 104.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = SbtCopUsrClick
+          end
+          object SbtCopPss: TSpeedButton
+            Hint = 'Copy password'
+            Images = ImageList
+            ImageIndex = 0
+            Position.X = 320.000000000000000000
+            Position.Y = 160.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = SbtCopPssClick
+          end
+          object SbtLauBro: TSpeedButton
+            Hint = 'Launch URL in default browser'
+            Images = ImageList
+            ImageIndex = 1
+            Position.X = 320.000000000000000000
+            Position.Y = 216.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            ParentShowHint = False
+            ShowHint = True
+            Visible = False
+            OnClick = SbtLauBroClick
+          end
+          object CirEdi: TCircle
+            Anchors = [akRight, akBottom]
+            Fill.Bitmap.Bitmap.PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0764494441546843ED995B6C55551AC7FFFB762E6D4F396D81D33B6242CB8B1A
+              B4491D23C1E2C48993098C114C4C2368D57843246AE2C39031868C89892254AA
+              C024D374328444F4A119894E1C5AE3031A2991072002F2600BBD407BCAB9F674
+              EF7DF69EFDADAE738676EF733F3ED95FD3EEF5ADBD7BFA7D7BAD6FADFFFA8A65
+              96F98D23F06B49BCFDB629BED7E5ED940DB94B30850E4DD4DA4C980DAE88CB47
+              F7559F1A11204C288672D914CD33567BF8F56FC23FBCF38E60B00F28819202A8
+              F9BAA15595C2BB2453EC364534F2EEBCB05CBF6EFDCEBF6451EB9BDD9418E3DD
+              0553540081FF0456C7E5F9BF2196DC091F14DE5D149201D5BAF4EBA2B937DA15
+              9D5EE8CD9F8203F00DFB9E5275E9A04B4ED6F0AEB2A0420DBAE1DE15EE0A1FE7
+              5D79917F0023502A23958745883DBCA72C58F9005110619806ACBCA11139724B
+              8CEC421774FE4856447ECD4AC3C87D1596F3FF2EB7F36ED18DFB57DC8F9D0D3B
+              B1BE623D24414252C40B55A81AA4BFC91FCB8AC4AF99B1DEBC19090F5ACEFF81
+              F794054550F0A0FF41EC5DB317DB02DBD0E269C1E5B9CB98D6581AAC9B57A737
+              A84FAB9F62005957AA9C01F89EF41DB586793B37CB02BDE98EEA0EBCD5FA163A
+              FD9DA8942BD1EA69458D5C830BB10BB8A5DFA2C7D65518EE40E29FEA17EC9732
+              9035004A58EBB26FC12A1F0157006FB6BE89CDB59BE196DCAC4F1115ACF1AC41
+              A554890BF10B88E81118023A94A7954BDA80769E3DE440C61CA0A5524D48BDDC
+              2C0B94B0F41537E2B83A7715F1649CDF59C027FBF0F8EAC7B1B3DE5A9D25B607
+              428376C8F775631D331CC83802E233CA0149493EC0CD9221C7699EDFEBBB1793
+              EA242EC62FB2B7DD5ED9CE9239854B74A14AAEC2A9E02904F52064C81510ACBD
+              7C403DC91F5984E308D00ECB36A93241CED7BBEBF172D3CBD8B7761F1E5BF518
+              427A0887AF1FC6E0CD41C4B4187FD27AE386862BF12B882423BCC77ACB269EAD
+              FD6F6D133717E13802D233E65F04B7B0919B25B3CAB50ACF373E8F1D0D3BD828
+              B455B4614A9BC2B9E839FC14FB090177007778EE60FBC0F7E1EFF1C12F1FE06A
+              E22AB30953B0B607C150AD5138C53A6EC3360224CC48DB70B364FCB21FDDF5DD
+              D851BF037EC50F4994B0D6BB16BB9B7663937F134613A33878ED20BEBDF52DCE
+              84CF60FFE87E1658D24CF24FE098E8866985B2045B87E71BCFEF145339CDCD92
+              A0394ECEEF6EDE8D664F33DB7153E8868EB3E1B378F79777713A741A6DDE3678
+              252F735E35481ED951924A67F0F7C11FB8C9B08D004962DE2C097266CBCA2D78
+              B1F1459BF3842CCAD850BD017B5AF6607DE57A96D42391918CCE13AAA46EE6CD
+              34B60048CFF366D1D0AAF2B0FF61BCDAFC2A9B2E4B9D4F210B325ADC2D082801
+              36DF490F65433084FB78338DED93E930C29B45411261E38A8D78A3F50DF66669
+              CE3B41CE4ECE4FA27FB29F256E2EE71710DA79238D2D003A49F166C1A424C29E
+              D63DB8DB77379B264E90B3B3DA2C062606707CF238C27A98DFC98126DA7CB305
+              903A06160A397F57D55D4C2274567732699089B016C6B1C963E89FE8C78C36C3
+              7B73636DACD5BC99C679721608CDF17515EBF05AF36B4C61A6F48D13513D8AC1
+              E9411C1D3F8A29758ACDFD52B005400770DECC0BDA65498451C23E5AF7285B7D
+              3231979CC397335FA2F75A2FC6AC6370A1CE2735C936D76C01580E4DF0664EC8
+              F94677235E6A7A095BEAB6A0C2922D99984FCE63283884DEB15E26E48A7AF38A
+              61F3CD1600953E78332BE47C9D52879E861E6C5FB51D2B5C2BF81D3BB4B6D34A
+              B37F6C3FCEC7CEE7B9E238615EE28D34B600A86EC39B59215940F280F44D8D2B
+              F3F99E76DC1F233FE2FDD1F7712EE220110AC014CC11DE4CE334858679332355
+              5215B6ADDE869EC61E26D4326D544923898BB18B38307A00DF85BE83666AFC4E
+              718862728837D3D8FE3255CCA8E8C44D1B5ED18BAD2BB73269EC24115290F33F
+              C77FC687A31F62687628AB44C807D33047C39BE2B94780CA7DA68863DCB471A7
+              F74E3CD7F41C93BF999CA7397E2D710D1F5FFF185FCD7C8539638EDF291E4110
+              8E593F6C99EFE8812C6A8710B14E734BA0C4A5B95FEFAACF29118E8C1FC16737
+              3E43CCF8FF61A5582403F32EDD7F889B8B700C806A959612FE07370B22A80531
+              30694984A9E38B4E55A5A00BE6DF671E191BE7E6229CE78005D52AA9DCC7CDBC
+              08A9A10589305E9844C84A52BA29C5A5BF72CB46C600A8D04AB54A6EE684CA20
+              9FDFFC3C2D11CA8529EBAF84FE149AE5A68D8C01105468A55A25371974E8A669
+              7263FE46FA7B3C318E93D327D177BD8F256FA9FAE636FAA20F454FF0B623B98B
+              BBC390A9566925F01FC9AC556A714FD53DF0881E769BD04D1D57E6AEB0F36DF1
+              BBEC620C43FC2236F3C89FF1C489AC3B5F5ED5692AB44622974EA482F8B561CE
+              7B434FE001E45C7FB34EA114131D67E35144B72E9D4EBF127DECCDE7E13C91FF
+              FF0738D5C3D54F2690F8C84AF08CE5BEA2B0561B4AD85C737E29798DC0ED5062
+              BBF595ED569E7EC2FF3D5412B44999A679484C98ED853A4F143C02B7E31DF636
+              CBA6FC8A154CB7F52A5A78775E90B62179403B6CA64D2A1F4A0A200555F33EDA
+              58D741759B85D287D04E07F0D419969DA4D861C4BC449298542513660EDA6699
+              65962904E07F0D9CDD8C9302FE0A0000000049454E44AE426082}
+            Fill.Bitmap.WrapMode = TileStretch
+            Fill.Kind = Bitmap
+            Position.X = 274.000000000000000000
+            Position.Y = 521.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claNull
+            Stroke.Thickness = 0.000000000000000000
+            Visible = False
+            OnClick = CirEdiClick
+            object ShadowEffect3: TShadowEffect
+              Distance = 2.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.500000000000000000
+              ShadowColor = xFF0DBF0D
+            end
+          end
+        end
+      end
+    end
+  end
+  object RetPopup: TRectangle
+    Corners = [BottomLeft, BottomRight]
+    Position.X = 168.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 61.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 8.000000000000000000
+    YRadius = 8.000000000000000000
+    object FAnPopup: TFloatAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Position.Y'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+    object ShEPopup: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+    object OverflowMenu: TListBox
+      Align = Top
+      Size.Width = 185.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 0
+      ShowScrollBars = False
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 185.000000000000000000
+      Viewport.Height = 60.000000000000000000
+      object LbiSettings: TListBoxItem
+        Selectable = False
+        TextSettings.HorzAlign = Center
+        StyledSettings = [Family, Size, Style, FontColor]
+        Size.Width = 185.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Settings'
+        OnClick = LbiSettingsClick
+      end
+      object LbiInfo: TListBoxItem
+        Selectable = False
+        TextSettings.HorzAlign = Center
+        StyledSettings = [Family, Size, Style, FontColor]
+        Position.Y = 30.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Info'
+        OnClick = LbiInfoClick
+      end
+    end
+  end
+  object StyleBook: TStyleBook
+    Styles = <
+      item
+      end>
+    Left = 104
+    Top = 408
+  end
+  object ToolBar: TToolBar
+    Size.Width = 354.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'toolbarstyle'
+    TabOrder = 0
+    object SpbMenu: TSpeedButton
+      Align = Right
+      Position.X = 306.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'detailstoolbutton'
+      OnClick = SpbMenuClick
+    end
+    object LblToolBar: TLabel
+      Align = Left
+      AutoSize = True
+      StyledSettings = [Family, Size, FontColor]
+      Margins.Left = 20.000000000000000000
+      Position.X = 20.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = False
+      Text = 'Password List'
+    end
+    object ShadowEffect2: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+    object SpbSave: TSpeedButton
+      Align = Right
+      Position.X = 266.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      OnClick = SpbSaveClick
+      object Glyph1: TGlyph
+        Align = Center
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = False
+        ImageIndex = 2
+        Images = ImageList
+      end
+    end
+    object SpbCancel: TSpeedButton
+      Align = Right
+      Position.X = 266.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      OnClick = SpbCancelClick
+      object Glyph2: TGlyph
+        Align = Center
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = False
+        ImageIndex = 3
+        Images = ImageList
+      end
+    end
+    object SpbDelete: TSpeedButton
+      Align = Right
+      Position.X = 266.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      OnClick = SpbDeleteClick
+      object Glyph3: TGlyph
+        Align = Center
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        ImageIndex = 4
+        Images = ImageList
+      end
+    end
+    object SpbRet: TSpeedButton
+      Align = Right
+      Position.X = 226.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      OnClick = SpbRetClick
+      object Glyph4: TGlyph
+        Align = Center
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        ImageIndex = 5
+        Images = ImageList
+      end
+    end
+  end
+  object BindSourceDB: TBindSourceDB
+    DataSet = DM.FDQuEntry
+    ScopeMappings = <>
+    Left = 200
+    Top = 408
+  end
+  object BindingsList: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 288
+    Top = 408
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'Title'
+      Control = ListView
+      FillExpressions = <
+        item
+          SourceMemberName = 'UserN'
+          ControlMemberName = 'Detail'
+        end
+        item
+          SourceMemberName = 'Icon'
+          ControlMemberName = 'Bitmap'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'Notes'
+      Control = EdtNotes
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'UserN'
+      Control = EdtUserN
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'URLpa'
+      Control = EdtURL
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'Title'
+      Control = EdtTitel
+      Track = False
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'DateC'
+      Control = DteDateC
+      Track = False
+    end
+    object LinkControlToField6: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'Passw'
+      Control = EdtPassw
+      Track = False
+    end
+    object LinkControlToField9: TLinkControlToField
+      Category = 'Schnelle Bindungen'
+      DataSource = BindSourceDB
+      FieldName = 'Icon'
+      Control = ImcIcon
+      Track = False
+    end
+  end
+  object ActionList: TActionList
+    Left = 288
+    Top = 352
+    object NextTabAction: TNextTabAction
+      Category = 'Tab'
+    end
+    object PreviousTabAction: TPreviousTabAction
+      Category = 'Tab'
+    end
+    object ChangeTabAction: TChangeTabAction
+      Category = 'Tab'
+    end
+  end
+  object ImageList: TImageList
+    Source = <
+      item
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 27
+            Height = 27
+            PNG = {
+              89504E470D0A1A0A0000000D494844520000001B0000001B08060000008DD4F4
+              55000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              010D49444154484BED96B14E024110860F4347622735D634F4144A42A28F40AB
+              21243E030DD0DAC813E00B98406D627C14A9B494020B4984EF5FF7C87AB9C0AE
+              DE5198FB922F7333C965766EEFB2171D92928DA282633CC7B20A81D46CF4E216
+              D77F702FEE644FD8C2194E5508E4DE462F9E512B1C982C07DCC9D4EC0C871837
+              D4DE5DE089C9FC59A19ED4ABC952484EA6853CA2BB2F212EB08E5B8E6C4CA381
+              EDEFCB681EE8128FB187A92427D32710AF3214BD2CBAEFC74BB36BB2CC299A65
+              42D12C138A6699E036EBE029DE992C07DC666FF882EF26CB81FFBB67EE499D44
+              A7B68E1D7165A32F5D6CE204AF55D8877E053E303ED37EE30D6ED93599B8C411
+              564DE6CF273E601FBF54383051B401D7CD5B336A0E1B0E0000000049454E44AE
+              426082}
+          end>
+        Name = 'ic_content_copy_black_18dp'
+      end
+      item
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 27
+            Height = 27
+            PNG = {
+              89504E470D0A1A0A0000000D494844520000001B0000001B08060000008DD4F4
+              55000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              010749444154484BED954D0EC14018864B42C4CAD2D209B0F4730012160EC01D
+              DC802338023790883D379038859D15090BDE773A6DF8B4D2199568F4499E7C9D
+              31FDDE341D1D27257164747DA4067B30AF46765CE11AEED4288416BCC05B0CB2
+              4F13FA6475F518C29C7BF931EC33722F5D645851D7B878EA27C3BE4A58D80272
+              F3D8CAFB5FF889277B47014E7535C2348C014B38D1D528D024CC0BEAA8915B8D
+              02A386C9200FA3C0A86163C8865B78E084AE1C739EBF1B3387FCD4B08661BDC6
+              66375AF33F61675DBB70232CC320382FD7F27E72D23590360C3BCF2A90C897CF
+              79B996B24F03FAF0A329A9C23E9427F50C1EE100D6214F61FEC74A506E7D06AD
+              E05E8D52128AE3DC01A2D048A2D6F941940000000049454E44AE426082}
+          end>
+        Name = 'ic_open_in_browser_black_18dp'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0179494441546843ED995B4AC53010868F3E29E23644F08278D98DEEC50D28E2
+              46D4777131A2AF222A5E9EF4FF690A3A4C27494F7252613EF8481FDA3F99F64C
+              5A3833C7719C49B309AFE10BFCAEEC292C0A17FF0CB5C96A59B408DE796D92DA
+              162B62113F9B218B1421434B23F3A5731721034B23F335E72A42869546E60F39
+              BA0819541A996F3958C452183578E16FAC73C720F363A8F32F87F1DFE205B426
+              A7075AE33D3049BC80D67801ADF102143EE1393C802BC1437801BFE0C2E8BF04
+              73BC875B70881DF800B56B6366A385587E406BF13DBB904F42CBB0CC460BB13C
+              83A9F0E7A4655866A38558EEC354D8135A86A54AC98F39366B6A93AEC2F7EE30
+              19FF988BB11DC61472CE352959C0711853380963556413C5E40B8CFB7C8C3D38
+              C96D94F225C57D7E082EFE116AD7C6CC460B49914F82FB3CB74AEE36F4085EC2
+              3177BE57C5DA46DFE05A77D81CAE65BD3BFC8BD5C477619C02B761CCA2C51F1C
+              9A4F70038E8245DCC057A885D794735EC1D18B771CC7A9CD6CF603618DB8E4EB
+              BB31090000000049454E44AE426082}
+            FileName = 
+              'E:\Downloads\Programmierung\Image\material-design-icons-3.0.1\co' +
+              'ntent\drawable-xhdpi\ic_save_black_24dp.png'
+          end>
+        Name = 'ic_save_black_24dp'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0119494441546843ED98DB0AC23010448B7EA4B7AFF382F89182EE940E8492C4
+              9AEC3629EC8141EA4373262D65C9E0388EE338CE86D84B1E92C378A5CB457293
+              600D1370E397E423794B344B401EF7C4BD9F129312D8792CC060C1A3A496509E
+              B94BD481EC7CA1DA1231795C5BBCA2239A25569727A91227C9529AC913C89696
+              682E4F4A4A74234F5225CE9239DDC913C8FE2AD1AD3CC995E85E9EA44A6C429E
+              C4763B4CD7F22455C2447E37FD3A139B7E85525F9BD87F3503A009B94FA5E600
+              68424E9E745B62893C49955832009AF08F3C2919004D289127CD4BD4C8935489
+              70003441439EE406401334E5C9AA2570E8345FA8469EC44A5C25EAE0B009874E
+              9AF2247CBA387F323D9DB33C5AC4CE9BC93B8EE3388EA3CB307C01191905D975
+              A662650000000049454E44AE426082}
+            FileName = 
+              'E:\Downloads\Programmierung\Image\material-design-icons-3.0.1\co' +
+              'ntent\drawable-xhdpi\ic_clear_black_24dp.png'
+          end>
+        Name = 'ic_clear_black_24dp'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0355494441546843ED98CBCB4D5118873FF7DC13916B3160247237C4DFA01898
+              88FC0344FE00B72949614A324419314789997B44CAB5DC19E0F7D4DA5FEF79BF
+              F79C6FEFB3D7D927394F3D2D7DF65997BDD75AEFBBD6D08001FF3963525997B1
+              72A3DC22D7C9E572BE9C2EE1B37C2D1FCADBF2A6BC257FCBBEB2449E90AFE49F
+              8ABE94C7E462D93873E559F94B469DABE24F7946CE918DB04B7E905167EAF85E
+              EE943D63823C2FA3C6F193BC20F7C8F572B69C98E4EDF2B7BDF2A2644D447520
+              5F63BCCCCA14795D460DB23077CBC9B22CD4C7401FC9A8CE6B9267B2C09B8F3A
+              FF4DEE9775DE16751F94DFA5AF9F4164F912E7A4AF9C37B752E662957C227D3B
+              4CA75AB0607DA57725BB506EE6C97BD2B7B74376059DFC286D65BCF95E74BE80
+              41F82FF14EB22154867DDE56C49CCF396DDAB15AFE90B6EDD3B21244581FA40E
+              C8A638246DDB04BB85B234A407B602B6CAEC7B7307D89D1E4BDB87A3B2142466
+              3EB7619F6F1A829EEDC30B592AF9DC2CED0F89B05582542EA6CA2FD2F665836C
+              81B7ED2125B65C95049AA6F92A096696ADA91C261A00F9BCE5462AFB816F7B6D
+              2A878906C061C44270E917BEED15A9EC0869AD9D77ED82887D268711044DFBCC
+              5B392A7EFF271D8EB0CFE4306292B4CF100F5A88A6D03F4534000E1B9619A9EC
+              07335359C096DE4234006E0F2C4B53E921A8E43462592A0B7CDFC20190365848
+              AEFA05E704CB83540E130D807B1BCB88E0D120DB52597027951DD924EDCA674D
+              643B9F56609AF4A9041703A3C257E1D2C9FE900378D3EC93B60FCF65BBB53282
+              E3D2FE989318296E53107B9E4ADB8723B2345CF7F980C6ED41531C96B66D4E68
+              0B6425B811B0959091FA5DA117AC91FE4879525686DB349F1771E0E6E0DD2BB8
+              D17E266D9B6FE42CD915DC55DACA900CB11783A0F3F7A56F6FBBAC859F4AC897
+              C819E09836FECDE329591B0EF39C8C7CE5AC096E0FEAEC4EEC362C583FE7F18A
+              1C27B340208B0681DC1E7000E70C5B168214FBBCDF2A0BE97CF673385F229A4E
+              8544EC4B928E11CD398C90CF23FFE66FFCDF65E923AC956993EDCD47B0B0B9EE
+              8B1AAF23BB4DED055B168E995CF771428A3A5345E63FFB7CD75B651D16496ECC
+              B8748A3AD749721BD283CA11D6523A391A051240AE6348BDB9FAE0F6807DBD38
+              CD7192E230423E4F4ACC7509250319306040D70C0DFD05F25AB768CFDB918D00
+              00000049454E44AE426082}
+            FileName = 
+              'E:\Downloads\Programmierung\Image\material-design-icons-3.0.1\co' +
+              'ntent\drawable-xhdpi\ic_remove_circle_outline_black_24dp.png'
+          end>
+        Name = 'ic_remove_circle_outline_black_24dp'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0175494441546843EDD74D2B056114C0F1414A291B0B0B258A9495F80216AC2C
+              E523B0F70D6C944FC08A0F6067252B76CA8285056561836C6DBC94E27FC64C4D
+              D373EF9D3B9EF3DC7974FEF5EB9AA93BCE69DC17896559966559FFA8EDEC31CA
+              64F8EFDF1FE32B1F3ECA058AC347B74079F8A816700D1FCD02AD86178DAFDDF0
+              A2D1751A5EBCE014BB58C1101A5195E15DDE7084550CA027D51DBEEC1E1B1844
+              B07C0D5F748B65A8A7317CD13ED45E23DAC3E7AE318E5AF5678FBD6C1E17984D
+              8F3C17EA2E88474CC17B2197B8C308BC1772896354AEEA07CB39FAB0941EE926
+              AF85275CA5479EAB7227E417DFE001AFD9B96EC9F3C6A052A725CA0D630E6BD8
+              C1193EE17A6ED101D46AB7449564A975C8DFFB175CD791F33350ABD512DD3689
+              3DB8EECA2154732D51B7699CA078AD0F8C42B5F2127F4DBEADBE23BFDE16D42B
+              2EE1A3053C43AE77292742942FE12B796DC85BB15C73424E844896F0997C3792
+              3BB1991E45DA22D4DF8DB40BF2DF9B655996155B49F203CA694E64D5E60E3100
+              00000049454E44AE426082}
+            FileName = 
+              'E:\Downloads\Programmierung\Image\material-design-icons-3.0.1\co' +
+              'ntent\drawable-xhdpi\ic_reply_black_24dp.png'
+          end>
+        Name = 'ic_reply_black_24dp'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'ic_content_copy_black_18dp'
+            SourceRect.Right = 27.000000000000000000
+            SourceRect.Bottom = 27.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'ic_open_in_browser_black_18dp'
+            SourceRect.Right = 27.000000000000000000
+            SourceRect.Bottom = 27.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'ic_save_black_24dp'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'ic_clear_black_24dp'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'ic_remove_circle_outline_black_24dp'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'ic_reply_black_24dp'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 200
+    Top = 352
+  end
+  object GestureManager: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 104
+    Top = 352
+  end
+end

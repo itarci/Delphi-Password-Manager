@@ -1,0 +1,154 @@
+object FrmLogin: TFrmLogin
+  Left = 0
+  Top = 0
+  ActiveControl = EdtPassword
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Login'
+  ClientHeight = 320
+  ClientWidth = 320
+  FormStyle = StayOnTop
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object ToolBar: TToolBar
+    Size.Width = 320.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Image: TImage
+      MultiResBitmap.Height = 48
+      MultiResBitmap.Width = 48
+      MultiResBitmap = <
+        item
+          Width = 48
+          Height = 48
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+            87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            0346494441546843ED9ACF6F124114C7F9A50B5E2A295152A3180F1E6C14D836
+            69630F24AD770F4AA289A69E8D89474F36315EB4370F7AD668A207FD135AAF4D
+            C3EF0462BC182A250D5235E15028027E67786C0AC242616736ADFD2464DE1B08
+            FBBE3BF366DE2C582D03A2AAEA62AD567B562814C62726268E51B7507680CBE5
+            DAC475AF2612891FD4DD465F01A150C8512A95D256ABF522759942A3D1588EC5
+            628FC8D5B053DB13B7DB9DB0D96C97C8350DDCC039AFD7FB656B6B2B4D5D1CDD
+            11F0FBFDE71D0EC737725BE06634B2640B0301B3D87C4D4F63371A8D2A647374
+            0560DE2FE17B9E90CB227F80617C49AE1482C1600C332048AE0502DA62B651DB
+            95CE792F3B78066278412607B3E20C991C5D01B8E37D73443488A14226475194
+            E3647274051C048E0498CD7F2FC01A0E874D4DF4510458A7A6A6B6D7D7D7CB93
+            939367A94F3A430B9899993985C6EDF1781C4EA773637A7AFA46F31DB9E80AC0
+            1AFC0BCDE69E9746B95C7690C9C1673F62E77E4CAE34FA56A3BD603B22EAA41C
+            B97B59C1767F8DEC914129710BA5C47B722D76BBFD02A6AD569F89588516901B
+            49B422BEFB1F445DE40AEEDCEFD9D95917F9C2D0A6101D5C96617A9B3D7D3981
+            42EB3AD95DC9E7F3559C27BC994CE62775ED9B7E5348138061AFA111322248F0
+            7954B29FC9DD1703E580CFE773B66C1160A456B1CCDE21D750A4241A03A3F016
+            A3FC9A5CC390268058848815B20D41B600C63CE6F5368418F268C60C01866286
+            80D5783C3E8EDDBA4AFE48C816F006812F906D08D2046029BD8BE0EF916B185C
+            40369B2DA3A9335B046C238B4422EFC83594C3534AEC179D729A53AFD74B8AA2
+            9C5E5B5BDBA1AEA118A89410400A2BCDC951831F041102D881C68F56584EED45
+            570086EF1576CC5CEB45DD3D41B22E19791A1B045D014852371AF630B5F5D240
+            B06D1B113E7B1325F35372A531F4144AA552856AB5BA512C16FFE0807F0ECBE4
+            277A4B2A23E50044F8B08728E974FA3B7549C788249692ACBD304280A91C0930
+            9BC32D006B3B7BD4622A88A1ED67D54AA5B24B2647570036ABAF64725455BD4F
+            A63410C3433239C964B2ED21B36E357AE07FE866040281144AD8CBE49A0A4AF4
+            DBA8723F90CBE99BC46363636AE7543203C4F0BC3378C6C0071A13FF6E93C375
+            E7BAFFDDC662F90B320045195BAB2BA40000000049454E44AE426082}
+          FileName = 'C:\RADStudio\Passwortliste\Icon\1436486472_login.png'
+        end>
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object LblLogin: TLabel
+      StyledSettings = []
+      Position.X = 48.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Enter your login information'
+    end
+  end
+  object Panel: TPanel
+    Align = Bottom
+    Position.Y = 280.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object BtnConnect: TButton
+      Align = Right
+      ModalResult = 1
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 116.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'OK'
+      OnClick = BtnConnectClick
+    end
+    object BtnCancel: TButton
+      Align = Right
+      ModalResult = 2
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 218.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Cancel'
+      OnClick = BtnCancelClick
+    end
+  end
+  object LblPassword: TLabel
+    StyledSettings = []
+    Position.X = 16.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Password'
+  end
+  object EdtPassword: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Password = True
+    Position.X = 88.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    object PebPasVie: TPasswordEditButton
+      CanFocus = False
+      Cursor = crArrow
+      Size.Width = 28.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object LblChoose: TLabel
+    AutoSize = True
+    Position.X = 16.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Choose a master password to protect your database:'
+    Visible = False
+  end
+end

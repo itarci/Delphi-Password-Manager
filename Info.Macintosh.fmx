@@ -1,0 +1,25 @@
+inherited FrmInfo_Macintosh: TFrmInfo_Macintosh
+  DesignerMasterStyle = 1
+  inherited Label1: TLabel
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited Image1: TImage
+    MultiResBitmap.Height = 256
+    MultiResBitmap.Width = 256
+  end
+  inherited Label10: TLabel
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited Image2: TImage
+    MultiResBitmap.Height = 440
+    MultiResBitmap.Width = 417
+  end
+  inherited Image3: TImage
+    MultiResBitmap.Height = 125
+    MultiResBitmap.Width = 402
+  end
+  inherited Image4: TImage
+    MultiResBitmap.Height = 101
+    MultiResBitmap.Width = 220
+  end
+end
