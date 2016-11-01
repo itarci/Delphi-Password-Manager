@@ -274,9 +274,7 @@ end;
 
 procedure TFrmEntryList.CirAddClick(Sender: TObject);
 begin
-  DM.FDQuEntry.UpdateOptions.ReadOnly := false;
-  DM.FDQuEntry.Close;
-  DM.FDQuEntry.Active := true;
+  DM.FDQuEntry.EnableControls;
   DM.FDQuEntry.Insert;
   ChangeTabAction.Tab := TabItem2;
   ChangeTabAction.ExecuteTarget(self);
@@ -288,9 +286,7 @@ end;
 
 procedure TFrmEntryList.CirEdiClick(Sender: TObject);
 begin
-  DM.FDQuEntry.UpdateOptions.ReadOnly := false;
-  DM.FDQuEntry.Close;
-  DM.FDQuEntry.Active := true;
+  DM.FDQuEntry.EnableControls;
   DM.FDQuEntry.Edit;
   EdtTitel.SetFocus;
   UpdateButton(3);
@@ -324,7 +320,7 @@ end;
 procedure TFrmEntryList.SpbCancelClick(Sender: TObject);
 begin
   DM.FDQuEntry.Cancel;
-  DM.FDQuEntry.UpdateOptions.ReadOnly := true;
+  DM.FDQuEntry.DisableControls;
   EdtPassw.Password := true;
   EdbPassw.IsPressed := false;
   UpdateButton(1);
@@ -334,7 +330,7 @@ procedure TFrmEntryList.SpbDeleteClick(Sender: TObject);
 {var
   TaskName: String;}
 begin
-  MessageDlg(Translate('Confirm delete?'), System.UITypes.TMsgDlgType.mtWarning,
+  MessageDlg(Translate('Confirm delete?'), System.UITypes.TMsgDlgType.mtInformation,
     [
       System.UITypes.TMsgDlgBtn.mbYes,
       System.UITypes.TMsgDlgBtn.mbNo
@@ -383,7 +379,7 @@ end;
 procedure TFrmEntryList.SpbSaveClick(Sender: TObject);
 begin
     DM.FDQuEntry.Post;
-    DM.FDQuEntry.UpdateOptions.ReadOnly := true;
+    DM.FDQuEntry.DisableControls;
     EdtPassw.Password := true;
     EdbPassw.IsPressed := false;
     UpdateButton(1);
@@ -396,7 +392,7 @@ begin
   // nStatus = 2 => Add mode
   // nStatus = 3 => Edit mode
   case nStatus of
-  0: LblToolBar.Text := 'Password List';
+  0: LblToolBar.Text := 'IJP Password Manager';
   1: LblToolBar.Text := DM.FDQuEntry.FieldByName('Title').AsString;
   2: LblToolBar.Text := Translate('Add entry');
   3: LblToolBar.Text := Translate('Edit entry');
@@ -535,6 +531,7 @@ begin
         begin
           TSearchBox(ListView.Controls[I]).Text := '';
         end;
+      DM.FDQuEntry.DisableControls;
       ChangeTabAction.Tab := TabItem2;
       ChangeTabAction.ExecuteTarget(self);
       UpdateButton(1);
