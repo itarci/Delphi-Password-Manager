@@ -6,7 +6,7 @@
         <MainSource>PassList.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Android</Platform>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>1119</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -317,25 +317,35 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Android)'!=''">
         <VerInfo_Keys>package=com.Possamai.$(MSBuildProjectName);label=IJP Password Manager;versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=internalOnly;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <Android_LauncherIcon36>C:\RADStudio\Passwortliste\Pictures\Logo_32x32.png</Android_LauncherIcon36>
+        <Android_LauncherIcon144>C:\RADStudio\Passwortliste\Pictures\Logo_144x144.png</Android_LauncherIcon144>
         <AUP_ACCESS_FINE_LOCATION>false</AUP_ACCESS_FINE_LOCATION>
+        <Android_LauncherIcon72>C:\RADStudio\Passwortliste\Pictures\Logo_72x72.png</Android_LauncherIcon72>
+        <Android_SplashImage426>C:\RADStudio\Passwortliste\Pictures\Splash_426x320.png</Android_SplashImage426>
         <AUP_READ_PHONE_STATE>false</AUP_READ_PHONE_STATE>
+        <Android_LauncherIcon96>C:\RADStudio\Passwortliste\Pictures\Logo_96x96.png</Android_LauncherIcon96>
         <AUP_ACCESS_COARSE_LOCATION>false</AUP_ACCESS_COARSE_LOCATION>
         <AUP_CALL_PHONE>false</AUP_CALL_PHONE>
+        <Android_LauncherIcon48>C:\RADStudio\Passwortliste\Pictures\Logo_48x48.png</Android_LauncherIcon48>
         <AUP_INTERNET>false</AUP_INTERNET>
         <AUP_WRITE_CALENDAR>false</AUP_WRITE_CALENDAR>
+        <Android_SplashImage470>C:\RADStudio\Passwortliste\Pictures\Splash_470x320.png</Android_SplashImage470>
         <AUP_CAMERA>false</AUP_CAMERA>
         <AUP_READ_CALENDAR>false</AUP_READ_CALENDAR>
+        <Android_SplashImage640>C:\RADStudio\Passwortliste\Pictures\Splash_640x480.png</Android_SplashImage640>
+        <Android_SplashImage960>C:\RADStudio\Passwortliste\Pictures\Splash_960x720.png</Android_SplashImage960>
         <VerInfo_Build>1</VerInfo_Build>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_OSX32)'!=''">
         <BT_BuildType>Debug</BT_BuildType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=Privat;FileDescription=Password Manager;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=IJP Password Manager;ProductVersion=1.0.0.0;Comments=by Itarci J. Possamai</VerInfo_Keys>
         <AppEnableAdministrator>true</AppEnableAdministrator>
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <Manifest_File>None</Manifest_File>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
-        <Icon_MainIcon>PassList.ico</Icon_MainIcon>
+        <Icon_MainIcon>PassList_Icon.ico</Icon_MainIcon>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
     </PropertyGroup>
@@ -403,9 +413,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="PassList.s3db" Configuration="Release" Class="ProjectFile">
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Splash_426x320.png" Configuration="Release" Class="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -423,6 +433,12 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_144x144.png" Configuration="Release" Class="iPad_AppIcon144">
                     <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="PassList.s3db" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -450,14 +466,38 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\iossim32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_80x80.png" Configuration="Release" Class="iPad_SpotLight80">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_2048x1536.png" Configuration="Release" Class="iPad_Launch2048x1536">
                     <Platform Name="iOSSimulator">
                         <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossim32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_72x72.png" Configuration="Debug" Class="iPad_AppIcon72"/>
+                <DeployFile LocalName="OSX32\Debug\PassList.entitlements" Configuration="Debug" Class="ProjectOSXEntitlements">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1242x2208.png" Configuration="Release" Class="iPhone_Launch1242">
                     <Platform Name="iOSSimulator">
+                        <RemoteName>Default-736h@3x.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Configuration="Debug" Class="Android_SplashImage960"/>
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Splash_960x720.png" Configuration="Release" Class="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -466,25 +506,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="OSX32\Debug\PassList.entitlements" Configuration="Debug" Class="ProjectOSXEntitlements">
-                    <Platform Name="OSX32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_40x40.png" Configuration="Debug" Class="iPhone_Spotlight40"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1242x2208.png" Configuration="Release" Class="iPhone_Launch1242">
-                    <Platform Name="iOSSimulator">
-                        <RemoteName>Default-736h@3x.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Configuration="Debug" Class="Android_SplashImage960"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_72x72.png" Configuration="Debug" Class="iPad_AppIcon72"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_80x80.png" Configuration="Release" Class="iPad_SpotLight80">
-                    <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Configuration="Debug" Class="Android_SplashImage426"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_29x29.png" Configuration="Release" Class="iPad_Setting29">
                     <Platform Name="iOSSimulator">
@@ -526,38 +548,38 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Configuration="Release" Class="Android_SplashImage470">
-                    <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_40x40.png" Configuration="Release" Class="iPad_SpotLight40">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_120x120.png" Configuration="Debug" Class="iPhone_AppIcon120"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_1536x2048.png" Configuration="Debug" Class="iPad_Launch1536x2048"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Configuration="Release" Class="Android_LauncherIcon48">
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Logo_48x48.png" Configuration="Release" Class="Android_LauncherIcon48">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_1536x2048.png" Configuration="Debug" Class="iPad_Launch1536x2048"/>
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Splash_470x320.png" Configuration="Release" Class="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_120x120.png" Configuration="Debug" Class="iPhone_AppIcon120"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_72x72.png" Configuration="Release" Class="iPad_AppIcon72">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Android\Release\styles.xml" Configuration="Release" Class="AndroidSplashStyles">
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Logo_96x96.png" Configuration="Release" Class="Android_LauncherIcon96">
                     <Platform Name="Android">
+                        <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Configuration="Release" Class="Android_SplashImage426">
+                <DeployFile LocalName="Android\Release\styles.xml" Configuration="Release" Class="AndroidSplashStyles">
                     <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -571,12 +593,6 @@
                 <DeployFile LocalName="OSX32\Debug\PassList.info.plist" Configuration="Debug" Class="ProjectOSXInfoPList">
                     <Platform Name="OSX32">
                         <RemoteName>Info.plist</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png" Configuration="Release" Class="Android_LauncherIcon36">
-                    <Platform Name="Android">
-                        <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -634,7 +650,13 @@
                 <DeployFile LocalName="C:\RADStudio\Passwortliste\Android\Release\classes.dex" Configuration="Release" Class="AndroidClassesDexFile"/>
                 <DeployFile LocalName="$(BDS)\lib\android\release\mips\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeMipsFile"/>
                 <DeployFile LocalName="$(BDS)\lib\android\release\armeabi\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeArmeabiFile"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png" Configuration="Release" Class="Android_LauncherIcon144">
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Splash_640x480.png" Configuration="Release" Class="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Logo_72x72.png" Configuration="Release" Class="Android_LauncherIcon72">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -646,23 +668,17 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Configuration="Release" Class="Android_SplashImage640">
-                    <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x960.png" Configuration="Debug" Class="iPhone_Launch640"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_60x60.png" Configuration="Debug" Class="iPhone_AppIcon60"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_1024x768.png" Configuration="Debug" Class="iPad_Launch1024x768"/>
                 <DeployFile LocalName="Android\Debug\AndroidManifest.xml" Configuration="Debug" Class="ProjectAndroidManifest"/>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Configuration="Debug" Class="Android_LauncherIcon72"/>
                 <DeployFile LocalName="iOSDevice32\Debug\PassList.info.plist" Configuration="Debug" Class="ProjectiOSInfoPList"/>
                 <DeployFile LocalName="Android\Release\AndroidManifest.xml" Configuration="Release" Class="ProjectAndroidManifest">
                     <Platform Name="Android">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Configuration="Debug" Class="Android_LauncherIcon72"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_50x50.png" Configuration="Debug" Class="iPad_SpotLight50"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_1024x768.png" Configuration="Release" Class="iPad_Launch1024x768">
                     <Platform Name="iOSSimulator">
@@ -684,8 +700,9 @@
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1004.png" Configuration="Debug" Class="iPad_Launch768"/>
                 <DeployFile LocalName="$(BDS)\lib\android\debug\x86\libnative-activity.so" Configuration="Debug" Class="AndroidLibnativeX86File"/>
                 <DeployFile LocalName="$(BDS)\lib\android\debug\x86\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeX86File"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_87x87.png" Configuration="Release" Class="iPhone_AppIcon87">
-                    <Platform Name="iOSSimulator">
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Logo_32x32.png" Configuration="Release" Class="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -702,6 +719,11 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_750x1334.png" Configuration="Debug" Class="iPhone_Launch750"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_152x152.png" Configuration="Debug" Class="iPad_AppIcon152"/>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_87x87.png" Configuration="Release" Class="iPhone_AppIcon87">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Configuration="Debug" Class="Android_LauncherIcon96"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_180x180.png" Configuration="Debug" Class="iPhone_AppIcon180"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_152x152.png" Configuration="Release" Class="iPad_AppIcon152">
@@ -758,6 +780,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_2048x1536.png" Configuration="Debug" Class="iPad_Launch2048x1536"/>
+                <DeployFile LocalName="C:\RADStudio\Passwortliste\Pictures\Logo_144x144.png" Configuration="Release" Class="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteName>ic_launcher.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Android\Release\classes.dex" Configuration="Release" Class="AndroidClassesDexFile">
                     <Platform Name="Android">
                         <RemoteName>classes.dex</RemoteName>
@@ -766,12 +794,6 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_76x76.png" Configuration="Release" Class="iPad_AppIcon76">
                     <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Configuration="Release" Class="Android_SplashImage960">
-                    <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -785,12 +807,6 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_80x80.png" Configuration="Release" Class="iPhone_Spotlight80">
                     <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Configuration="Release" Class="Android_LauncherIcon72">
-                    <Platform Name="Android">
-                        <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -837,12 +853,6 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="iOSDevice32\Debug\PassList.entitlements" Configuration="Debug" Class="ProjectiOSEntitlements"/>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Configuration="Release" Class="Android_LauncherIcon96">
-                    <Platform Name="Android">
-                        <RemoteName>ic_launcher.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png" Configuration="Debug" Class="Android_LauncherIcon36"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_57x57.png" Configuration="Debug" Class="iPhone_AppIcon57"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_87x87.png" Configuration="Debug" Class="iPhone_AppIcon87"/>
@@ -867,12 +877,27 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_320x480.png" Configuration="Debug" Class="iPhone_Launch320"/>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_1536x2008.png" Configuration="Debug" Class="iPad_Launch1536"/>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -1223,27 +1248,12 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

@@ -4,7 +4,7 @@
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
     <PropertyGroup>
-        <DeviceId Condition="'$(Platform)'=='Android'">c81ffc1a</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='Android'"/>
         <DeviceId Condition="'$(Platform)'=='iOSDevice32'"/>
         <DeviceId Condition="'$(Platform)'=='iOSDevice64'"/>
         <DeviceId Condition="'$(Platform)'=='iOSSimulator'">iPhone5</DeviceId>
@@ -347,6 +347,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_80x80.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>PassList.app\</RemoteDir>
+            <RemoteName>FM_SpotlightSearchIcon_80x80.png</RemoteName>
+            <DeployClass>iPad_SpotLight80</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_2048x1536.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>PassList.app\</RemoteDir>
             <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
@@ -365,15 +374,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_40x40.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>PassList.app\</RemoteDir>
-            <RemoteName>FM_SpotlightSearchIcon_40x40.png</RemoteName>
-            <DeployClass>iPhone_Spotlight40</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1242x2208.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>PassList.app\</RemoteDir>
             <RemoteName>Default-736h@3x.png</RemoteName>
@@ -383,10 +383,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_80x80.png" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_40x40.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>PassList.app\</RemoteDir>
-            <RemoteName>FM_SpotlightSearchIcon_80x80.png</RemoteName>
-            <DeployClass>iPad_SpotLight80</DeployClass>
+            <RemoteName>FM_SpotlightSearchIcon_40x40.png</RemoteName>
+            <DeployClass>iPhone_Spotlight40</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>

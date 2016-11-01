@@ -60,6 +60,7 @@ begin
         DM.FDConnection.Params.NewPassword := EdtPassword.Text;
       DM.FDConnection.Connected := true;
       DM.FDQuEntry.Active := true;
+      //DM.FDQuEntry.UpdateOptions.ReadOnly := true;
       bConnected := true;
       if DM.FDConnection.Connected then
       begin

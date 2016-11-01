@@ -4,6 +4,7 @@ object DM: TDM
   Width = 347
   object FDConnection: TFDConnection
     Params.Strings = (
+      'LockingMode=Normal'
       'DriverID=SQLite')
     LoginDialog = FDGUIxLoginDialog
     LoginPrompt = False
@@ -20,10 +21,7 @@ object DM: TDM
   object FDQuEntry: TFDQuery
     OnNewRecord = FDQuEntryNewRecord
     Connection = FDConnection
-    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
-    UpdateOptions.EnableDelete = False
-    UpdateOptions.EnableInsert = False
-    UpdateOptions.EnableUpdate = False
+    UpdateOptions.AssignedValues = [uvCheckReadOnly]
     SQL.Strings = (
       'select Title, Icon, UserN, Passw, URLpa, Notes, DateC from ENTRY')
     Left = 200
@@ -106,6 +104,7 @@ object DM: TDM
       end>
   end
   object Lang: TLang
+    Lang = 'de'
     Left = 200
     Top = 168
     ResourcesBin = {

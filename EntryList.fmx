@@ -3,7 +3,7 @@ object FrmEntryList: TFrmEntryList
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
-  Caption = 'IJP Password Manager'
+  Caption = 'Password Manager'
   ClientHeight = 641
   ClientWidth = 354
   StyleBook = StyleBook
@@ -191,7 +191,7 @@ object FrmEntryList: TFrmEntryList
             Size.Width = 72.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 157
+            TabOrder = 163
             OnChange = ImcIconChange
             OnClick = ImcIconClick
           end
@@ -376,7 +376,6 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             ParentShowHint = False
             ShowHint = True
-            Visible = False
             OnClick = SbtLauBroClick
           end
           object CirEdi: TCircle
@@ -557,12 +556,12 @@ object FrmEntryList: TFrmEntryList
       StyledSettings = [Family, Size, FontColor]
       Margins.Left = 20.000000000000000000
       Position.X = 20.000000000000000000
-      Size.Width = 76.000000000000000000
+      Size.Width = 127.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.WordWrap = False
-      Text = 'Password List'
+      Text = 'IJP Password Manager'
     end
     object ShadowEffect2: TShadowEffect
       Distance = 3.000000000000000000
