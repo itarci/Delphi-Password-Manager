@@ -165,6 +165,7 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Title'
+            TabOrder = 1
           end
           object LblIcon: TLabel
             Position.X = 272.000000000000000000
@@ -173,6 +174,7 @@ object FrmEntryList: TFrmEntryList
             Size.Height = 22.000000000000000000
             Size.PlatformDefault = False
             Text = 'Icon'
+            TabOrder = 7
           end
           object ImcIcon: TImageControl
             Bitmap.PNG = {
@@ -191,7 +193,7 @@ object FrmEntryList: TFrmEntryList
             Size.Width = 72.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 163
+            TabOrder = 169
             OnChange = ImcIconChange
             OnClick = ImcIconClick
           end
@@ -213,6 +215,7 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Username'
+            TabOrder = 170
           end
           object EdtUserN: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -242,6 +245,7 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Password'
+            TabOrder = 171
           end
           object EdtPassw: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -278,6 +282,7 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'URL'
+            TabOrder = 172
           end
           object EdtURL: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -307,6 +312,7 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Notes'
+            TabOrder = 173
           end
           object EdtNotes: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -329,9 +335,11 @@ object FrmEntryList: TFrmEntryList
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Date created'
+            TabOrder = 174
           end
           object DteDateC: TDateEdit
-            Date = 42005.000000000000000000
+            IsEmpty = True
+            Date = 42673.000000000000000000
             Position.X = 8.000000000000000000
             Position.Y = 440.000000000000000000
             Size.Width = 161.000000000000000000
@@ -735,7 +743,6 @@ object FrmEntryList: TFrmEntryList
   object ImageList: TImageList
     Source = <
       item
-        MultiResBitmap.LoadSize = 2
         MultiResBitmap = <
           item
             Width = 27
@@ -757,7 +764,6 @@ object FrmEntryList: TFrmEntryList
         Name = 'ic_content_copy_black_18dp'
       end
       item
-        MultiResBitmap.LoadSize = 2
         MultiResBitmap = <
           item
             Width = 27
@@ -780,7 +786,6 @@ object FrmEntryList: TFrmEntryList
       item
         MultiResBitmap.Height = 48
         MultiResBitmap.Width = 48
-        MultiResBitmap.LoadSize = 2
         MultiResBitmap = <
           item
             Width = 48
@@ -810,7 +815,6 @@ object FrmEntryList: TFrmEntryList
       item
         MultiResBitmap.Height = 48
         MultiResBitmap.Width = 48
-        MultiResBitmap.LoadSize = 2
         MultiResBitmap = <
           item
             Width = 48
@@ -837,7 +841,6 @@ object FrmEntryList: TFrmEntryList
       item
         MultiResBitmap.Height = 48
         MultiResBitmap.Width = 48
-        MultiResBitmap.LoadSize = 2
         MultiResBitmap = <
           item
             Width = 48
@@ -882,7 +885,6 @@ object FrmEntryList: TFrmEntryList
       item
         MultiResBitmap.Height = 48
         MultiResBitmap.Width = 48
-        MultiResBitmap.LoadSize = 2
         MultiResBitmap = <
           item
             Width = 48
