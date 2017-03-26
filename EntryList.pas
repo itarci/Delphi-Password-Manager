@@ -274,7 +274,7 @@ end;
 
 procedure TFrmEntryList.CirAddClick(Sender: TObject);
 begin
-  DM.FDQuEntry.EnableControls;
+  DM.FDQuEntry.UpdateOptions.ReadOnly := false;
   DM.FDQuEntry.Insert;
   ChangeTabAction.Tab := TabItem2;
   ChangeTabAction.ExecuteTarget(self);
@@ -286,7 +286,7 @@ end;
 
 procedure TFrmEntryList.CirEdiClick(Sender: TObject);
 begin
-  DM.FDQuEntry.EnableControls;
+  DM.FDQuEntry.UpdateOptions.ReadOnly := false;
   DM.FDQuEntry.Edit;
   EdtTitel.SetFocus;
   UpdateButton(3);
@@ -320,7 +320,7 @@ end;
 procedure TFrmEntryList.SpbCancelClick(Sender: TObject);
 begin
   DM.FDQuEntry.Cancel;
-  DM.FDQuEntry.DisableControls;
+  DM.FDQuEntry.UpdateOptions.ReadOnly := true;
   EdtPassw.Password := true;
   EdbPassw.IsPressed := false;
   UpdateButton(1);
@@ -379,7 +379,7 @@ end;
 procedure TFrmEntryList.SpbSaveClick(Sender: TObject);
 begin
     DM.FDQuEntry.Post;
-    DM.FDQuEntry.DisableControls;
+    DM.FDQuEntry.UpdateOptions.ReadOnly := true;
     EdtPassw.Password := true;
     EdbPassw.IsPressed := false;
     UpdateButton(1);
@@ -397,6 +397,7 @@ begin
   2: LblToolBar.Text := Translate('Add entry');
   3: LblToolBar.Text := Translate('Edit entry');
   end;
+  ImcIcon.Enabled := (nStatus = 2) or (nStatus = 3);
   SpbRet.Visible := (nStatus = 1);
   SpbCancel.Visible := (nStatus = 2) or (nStatus = 3);
   SpbSave.Visible := (nStatus = 2) or (nStatus = 3);
@@ -531,7 +532,6 @@ begin
         begin
           TSearchBox(ListView.Controls[I]).Text := '';
         end;
-      DM.FDQuEntry.DisableControls;
       ChangeTabAction.Tab := TabItem2;
       ChangeTabAction.ExecuteTarget(self);
       UpdateButton(1);
