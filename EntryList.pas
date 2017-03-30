@@ -13,7 +13,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants, FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics,
-  FMX.Dialogs, FMX.TabControl, FMX.Layouts, FMX.Controls.Presentation,
+  FMX.DialogService, FMX.TabControl, FMX.Layouts, FMX.Controls.Presentation,
   FMX.StdCtrls, Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti, System.Math,
   System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.Components, FMX.Effects,
   Data.Bind.DBScope, FMX.DateTimeCtrls, FMX.ScrollBox, FMX.Memo, FMX.Edit,
@@ -78,8 +78,6 @@ type
     LinkControlToField6: TLinkControlToField;
     LinkControlToField9: TLinkControlToField;
     ActionList: TActionList;
-    NextTabAction: TNextTabAction;
-    PreviousTabAction: TPreviousTabAction;
     ChangeTabAction: TChangeTabAction;
     SpbMenu: TSpeedButton;
     OverflowMenu: TListBox;
@@ -305,7 +303,7 @@ begin
     procedure(ModalResult: TModalResult)
     begin
       if ModalResult = mrOk then
-        if DM.FDQuEntry.CanModify then
+        if DM.FDQuEntry.CanModify = true then
           DM.FDQuEntry.FieldByName('Passw').AsString := FrmPassGen.EdtResul.Text;
     end);
 end;
@@ -330,19 +328,16 @@ procedure TFrmEntryList.SpbDeleteClick(Sender: TObject);
 {var
   TaskName: String;}
 begin
-  MessageDlg(Translate('Confirm delete?'), System.UITypes.TMsgDlgType.mtInformation,
-    [
-      System.UITypes.TMsgDlgBtn.mbYes,
-      System.UITypes.TMsgDlgBtn.mbNo
-    ], 0,
-    procedure(const AResult: System.UITypes.TModalResult)
+  TDialogService.MessageDialog(('Confirm delete?'), TMsgDlgType.mtInformation,
+    [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], TMsgDlgBtn.mbOK, 0,
+    procedure(const AResult: TModalResult)
     begin
-      if AResult = mrYes then
-      begin
-        DM.FDQuEntry.UpdateOptions.ReadOnly := false;
-        DM.FDQuEntry.Delete;
-        DM.FDQuEntry.UpdateOptions.ReadOnly := true;
-      end;
+        if AResult = mrYes then
+        begin
+          DM.FDQuEntry.UpdateOptions.ReadOnly := false;
+          DM.FDQuEntry.Delete;
+          DM.FDQuEntry.UpdateOptions.ReadOnly := true;
+        end;
     end);
   SpbDelete.Visible := DM.FDQuEntry.RecordCount > 0;
 
@@ -432,12 +427,19 @@ begin
   // Função ainda indisponível
 
   {$IF Defined(MSWINDOWS) or (Defined(MACOS) and not Defined(IOS))}
-  MessageDlg(Translate('3 seconds after you click OK, whatever is the active '+
-    'window will have typed into it'), TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
-  DM.LaunchBrowser(EdtURL.Text);
-  Sleep(3000);
-  TVirtualKeySequence.Execute(EdtPassw.Text);
-  {$IFEND}
+  TDialogService.MessageDialog(Translate('3 seconds after you click OK, whatever is the active '+
+    'window will have typed into it'), TMsgDlgType.mtInformation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo],
+    TMsgDlgBtn.mbYes, 0,
+    procedure(const AResult: TModalResult)
+    begin
+        if AResult = mrOk then
+        begin
+          DM.LaunchBrowser(EdtURL.Text);
+          Sleep(3000);
+          TVirtualKeySequence.Execute(EdtPassw.Text);
+        end;
+    end);
+  {$ENDIF}
 end;
 
 procedure TFrmEntryList.UpdateKBBounds;
@@ -525,6 +527,7 @@ procedure TFrmEntryList.ListViewItemClickEx(const Sender: TObject;
 var
   I: Integer;
 begin
+  UpdateButton(1);
   if LocalClickPos.X >= TListView(Sender).Width - 60 then
     begin
       for I := 0 to ListView.Controls.Count-1 do
@@ -533,8 +536,7 @@ begin
           TSearchBox(ListView.Controls[I]).Text := '';
         end;
       ChangeTabAction.Tab := TabItem2;
-      ChangeTabAction.ExecuteTarget(self);
-      UpdateButton(1);
+      ChangeTabAction.ExecuteTarget(Nil);
     end;
 end;
 
