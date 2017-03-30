@@ -338,7 +338,6 @@ object FrmEntryList: TFrmEntryList
             TabOrder = 174
           end
           object DteDateC: TDateEdit
-            IsEmpty = True
             Date = 42673.000000000000000000
             Position.X = 8.000000000000000000
             Position.Y = 440.000000000000000000
@@ -730,12 +729,6 @@ object FrmEntryList: TFrmEntryList
   object ActionList: TActionList
     Left = 288
     Top = 352
-    object NextTabAction: TNextTabAction
-      Category = 'Tab'
-    end
-    object PreviousTabAction: TPreviousTabAction
-      Category = 'Tab'
-    end
     object ChangeTabAction: TChangeTabAction
       Category = 'Tab'
     end
